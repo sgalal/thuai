@@ -16,7 +16,7 @@ function 字的推導音(c) {
 			const k = QieyunExamples.putonghua(item.小韻號);
 			if (k === '?') continue;
 			const lastChar = [...k].slice(-1)[0];
-			if (![...'1234'].includes(lastChar)) {  // startsWith: 清入歸入任何一聲均視為正確
+			if (![...'1234'].includes(lastChar)) {  // 清入歸入任何一聲均視為正確
 				d.add(k + '1');
 				d.add(k + '2');
 				d.add(k + '3');
@@ -44,10 +44,6 @@ for (const c of s) {
 		if (推導音.some((v) => 實際音.some((k) => k === v))) acc++;
 		i++;
 	}
-}
-
-function makePercentage(n) {
-	return n.toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 2 });
 }
 
 console.log(`${i} characters counted. Accuracy: ${(100 * acc / i).toFixed(2)}%.`);
