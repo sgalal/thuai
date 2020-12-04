@@ -1,0 +1,4 @@
+node_modules
+*.dict.yaml
+常用字頻序表.txt
+package-lock.json
